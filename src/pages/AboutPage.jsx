@@ -371,7 +371,7 @@ export default function AboutPage() {
                 Download my complete CV for detailed project experience, technical skills, and professional background.
               </p>
               <motion.a
-                href="/valentine-maiyo-cv.pdf"
+                href="https://maiyoj.github.io/vfolio/cv.pdf"
                 download
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}

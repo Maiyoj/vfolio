@@ -370,7 +370,7 @@ export default function AboutPage() {
               <p className="text-textLight text-base lg:text-lg mb-6 lg:mb-8 max-w-md mx-auto">
                 Download my complete CV for detailed project experience, technical skills, and professional background.
               </p>
-              <motion.a
+              {/* <motion.a
                 href="https://maiyoj.github.io/vfolio/cv.pdf"
                 download
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -379,7 +379,22 @@ export default function AboutPage() {
               >
                 <Download size={20} />
                 Download CV
+              </motion.a> */}
+                <motion.a
+                  href="/vfolio/cv.pdf"
+                  download="Valentine_Maiyo_CV.pdf"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-2 lg:gap-3 px-8 lg:px-10 py-3 lg:py-4 
+                            rounded-xl lg:rounded-2xl bg-accent text-background font-semibold 
+                            text-base lg:text-lg hover:bg-accent/90 transition-all duration-300 
+                            shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 
+                            focus:ring-accent focus:ring-offset-2"
+                >
+                  <Download size={22} className="shrink-0" />
+                  <span>Download CV</span>
               </motion.a>
+
             </div>
           </motion.div>
 

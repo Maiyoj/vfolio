@@ -381,7 +381,7 @@ export default function AboutPage() {
                 Download CV
               </motion.a> */}
                 <motion.a
-                  href="/vfolio/cv.pdf"
+                  href="/vfolio/Valentine-Maiyo-Resume.pdf"
                   download="Valentine-Maiyo-Resume.pdf"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}

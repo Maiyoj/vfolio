@@ -88,7 +88,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
             <motion.a
-              href="./vfolio/projects"
+              href="./projects"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="group px-8 py-4 rounded-xl bg-accent text-background font-semibold hover:bg-accent-dark transition-all duration-300 flex items-center justify-center gap-2 shadow-lg accent-glow"
@@ -97,7 +97,7 @@ export default function Home() {
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </motion.a>
             <motion.a
-              href="./vfolio/contact"
+              href="./contact"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-xl border-2 border-accent text-accent font-semibold hover:bg-accent hover:text-background transition-all duration-300 backdrop-blur-sm"

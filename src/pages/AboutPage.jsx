@@ -382,7 +382,7 @@ export default function AboutPage() {
               </motion.a> */}
                 <motion.a
                   href="/vfolio/cv.pdf"
-                  download="Valentine_Maiyo_CV.pdf"
+                  download="Valentine-Maiyo-Resume.pdf"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   className="inline-flex items-center gap-2 lg:gap-3 px-8 lg:px-10 py-3 lg:py-4 

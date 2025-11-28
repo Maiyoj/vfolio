@@ -1,15 +1,21 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
 import { Star, FolderOpen, Rocket, ArrowRight } from "lucide-react";
+import vendorPortalImg from "../assets/projects/vendor-portal.png";
+import insurancePortalImg from "../assets/projects/gsk.png";
+import leaveManagementImg from "../assets/projects/sga.png";
+import etimsIntegrationImg from "../assets/projects/vendor-portal.png";
+import hotelBookingImg from "../assets/projects/stayz.png";
+import procurementImg from "../assets/projects/vendor-portal.png";
 
 // Import placeholder images from assets
 const placeholderImages = {
-  vendorPortal: "/assets/projects/vendor-portal.jpg",
-  insurancePortal: "/assets/projects/insurance-portal.jpg", 
-  leaveManagement: "/assets/projects/leave-management.jpg",
-  etimsIntegration: "/assets/projects/etims-integration.jpg",
-  hotelBooking: "/assets/projects/hotel-booking.jpg",
-  procurement: "/assets/projects/procurement-system.jpg"
+  vendorPortal: vendorPortalImg,
+  insurancePortal: insurancePortalImg,
+  leaveManagement: leaveManagementImg,
+  etimsIntegration: etimsIntegrationImg,
+  hotelBooking: hotelBookingImg,
+  procurement: procurementImg
 };
 
 export default function ProjectsPage() {

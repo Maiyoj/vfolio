@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
-export default function ProjectCard({ title, description, tags, links, index }) {
+export default function ProjectCard({ title, description, tags, links, index, image }) {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -22,6 +22,18 @@ export default function ProjectCard({ title, description, tags, links, index }) 
       transition={{ type: "spring", stiffness: 300 }}
       className="card-glass p-8 hover:border-accent/40 group cursor-pointer h-full flex flex-col"
     >
+
+      {/* Project Image */}
+      {image && (
+        <div className="w-full h-48 mb-6 rounded-xl overflow-hidden">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      )}
+
       {/* Project Header */}
       <div className="flex items-start justify-between mb-4">
         <h3 className="text-2xl font-serif font-bold text-white group-hover:text-accent transition-colors">

@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
+import { Link } from "react-router-dom";
 import { Download, FileText, Zap, ArrowRight, Code, Server, Cloud, Database } from "lucide-react";
+     const MotionLink = motion(Link);
+
 
 // Move static data outside component to prevent re-renders
 const SKILL_CATEGORIES = [
@@ -399,59 +402,56 @@ export default function AboutPage() {
           </motion.div>
 
           {/* Professional CTA */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 2.2 }}
-            className="relative"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-transparent to-accent/10 rounded-3xl blur-xl"></div>
-            <div className="card-glass p-8 lg:p-12 xl:p-20 text-center relative border-2 border-accent/30 backdrop-blur-sm rounded-3xl">
-              <motion.div
-                animate={{ 
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 5, -5, 0]
-                }}
-                transition={{ 
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="w-20 h-20 lg:w-28 lg:h-28 rounded-2xl lg:rounded-3xl bg-gradient-to-br from-accent/20 to-accent/10 border-2 border-accent/30 flex items-center justify-center mx-auto mb-6 lg:mb-8 shadow-2xl"
-              >
-                <Zap className="w-8 h-8 lg:w-12 lg:h-12 text-accent" />
-              </motion.div>
-              
-              <h3 className="text-2xl lg:text-3xl xl:text-4xl font-serif font-bold text-white mb-4 lg:mb-6">
-                Ready to <span className="gradient-text">Collaborate?</span>
-              </h3>
-              
-              <p className="text-lg lg:text-xl text-textLight mb-8 lg:mb-10 max-w-2xl mx-auto leading-relaxed">
-                Let's discuss how we can work together to build your next project with professional quality and technical excellence.
-              </p>
+   
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 2.2 }}
+          className="relative"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-transparent to-accent/10 rounded-3xl blur-xl"></div>
 
-              <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center items-center">
-                <motion.a
-                  href="/contact"
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 lg:gap-3 px-8 lg:px-10 py-3 lg:py-4 rounded-xl lg:rounded-2xl bg-accent text-background font-bold text-base lg:text-lg hover:bg-accent-dark transition-all duration-300 shadow-xl accent-glow flex-1 sm:flex-none justify-center max-w-xs"
-                >
-                  Start a Project
-                  <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
-                </motion.a>
-                
-                <motion.a
-                  href="/projects"
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 lg:gap-3 px-8 lg:px-10 py-3 lg:py-4 rounded-xl lg:rounded-2xl border-2 border-accent text-accent font-bold text-base lg:text-lg hover:bg-accent hover:text-background transition-all duration-300 backdrop-blur-sm flex-1 sm:flex-none justify-center max-w-xs"
-                >
-                  View My Work
-                </motion.a>
-              </div>
+          <div className="card-glass p-8 lg:p-12 xl:p-20 text-center relative border-2 border-accent/30 backdrop-blur-sm rounded-3xl">
+            <motion.div
+              animate={{ scale: [1, 1.1, 1], rotate: [0, 5, -5, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="w-20 h-20 lg:w-28 lg:h-28 rounded-2xl lg:rounded-3xl bg-gradient-to-br from-accent/20 to-accent/10 border-2 border-accent/30 flex items-center justify-center mx-auto mb-6 lg:mb-8 shadow-2xl"
+            >
+              <Zap className="w-8 h-8 lg:w-12 lg:h-12 text-accent" />
+            </motion.div>
+
+            <h3 className="text-2xl lg:text-3xl xl:text-4xl font-serif font-bold text-white mb-4 lg:mb-6">
+              Ready to <span className="gradient-text">Collaborate?</span>
+            </h3>
+
+            <p className="text-lg lg:text-xl text-textLight mb-8 lg:mb-10 max-w-2xl mx-auto leading-relaxed">
+              Let's discuss how we can work together to build your next project with professional quality and technical excellence.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center items-center">
+              
+              <Link
+                to="/contact"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 lg:gap-3 px-8 lg:px-10 py-3 lg:py-4 rounded-xl lg:rounded-2xl bg-accent text-background font-bold text-base lg:text-lg hover:bg-accent-dark transition-all duration-300 shadow-xl accent-glow flex-1 sm:flex-none justify-center max-w-xs"
+              >
+                Start a Project
+                <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
+              </Link>
+
+              <Link
+                to="/projects"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 lg:gap-3 px-8 lg:px-10 py-3 lg:py-4 rounded-xl lg:rounded-2xl border-2 border-accent text-accent font-bold text-base lg:text-lg hover:bg-accent hover:text-background transition-all duration-300 backdrop-blur-sm flex-1 sm:flex-none justify-center max-w-xs"
+              >
+                View My Work
+              </Link>
+
             </div>
-          </motion.div>
+          </div>
+        </motion.div>
         </motion.div>
       </section>
     </PageTransition>

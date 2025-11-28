@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 import { Star, FolderOpen, Rocket, ArrowRight } from "lucide-react";
 import vendorPortalImg from "../assets/projects/vendor-portal.png";
@@ -192,31 +193,33 @@ export default function ProjectsPage() {
         </div>
       </motion.div>
 
-      {/* Professional Call to Action */}
+          {/* Professional Call to Action */}
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-        className="text-center mt-20"
-      >
-        <div className="card-glass p-12 max-w-2xl mx-auto border-2 border-accent/20 rounded-3xl">
-          <h3 className="text-2xl font-serif font-bold text-white mb-4">
-            Have a project in mind?
-          </h3>
-          <p className="text-textLight mb-8">
-            Let's discuss how we can build your next application with the same level of quality and attention to detail.
-          </p>
-          <motion.a
-            href="/contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-accent text-background font-semibold hover:bg-accent-dark transition-all duration-300 shadow-lg accent-glow"
-          >
-            Start a Conversation
-            <ArrowRight size={20} />
-          </motion.a>
-        </div>
-      </motion.div>
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="text-center mt-20"
+        >
+          <div className="card-glass p-12 max-w-2xl mx-auto border-2 border-accent/20 rounded-3xl">
+            <h3 className="text-2xl font-serif font-bold text-white mb-4">
+              Have a project in mind?
+            </h3>
+
+            <p className="text-textLight mb-8">
+              Let's discuss how we can build your next application with the same level of quality and attention to detail.
+            </p>
+
+            <Link
+              to="/contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-accent text-background font-semibold hover:bg-accent-dark transition-all duration-300 shadow-lg accent-glow"
+            >
+              Start a Conversation
+              <ArrowRight size={20} />
+            </Link>
+          </div>
+    </motion.div>
     </section>
   );
 }
